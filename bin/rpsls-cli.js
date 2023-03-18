@@ -43,8 +43,8 @@ if (args._.length == 0) {
 
 let hand = args._[0];
 try {
-    result = rpsls(hand);
-    console.log(JSON.stringify(result))
+    let result = rpsls(hand);
+    console.log(JSON.stringify(result));
 } catch (err) {
     console.log(err);
     console.log('\ninvalid entry\n');

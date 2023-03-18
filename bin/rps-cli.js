@@ -37,7 +37,7 @@ if (args._.length == 0) {
 
 let hand = args._[0];
 try {
-    result = rps(hand);
+    let result = rps(hand);
     console.log(JSON.stringify(result))
 } catch (err) {
     console.log(err);
