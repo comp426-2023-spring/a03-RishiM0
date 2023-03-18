@@ -1,26 +1,27 @@
 minimist = require(minimist);
 import {rps} from '../lib/rpsls.js';
 
-var args = minimist(process.argv.split(2));
+let args = minimist(process.argv.split(2));
 
-theHelp(() => {
-    console.log('Usage: node-rps [SHOT]\nPlay Rock Paper Scissors (RPS)\n\n',
-        '  -h, --help      display this help message and exit\n',
-        '  -r, --rules     display the rules and exit\n\nExamples:\n',
-        '  node-rps        Return JSON with single player RPS result.\n',
-        '                  e.g. {"player":"rock"}\n',
-        '  node-rps rock   Return JSON with results for RPS played against a simulated opponent.\n',
-        '                  e.g {"player":"rock","opponent":"scissors","result":"win"}'
+function theHelp() {
+    console.log('Usage: node-rpsls [SHOT]\nPlay the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)!\n\n',
+    '  -h, --help        display this help message and exit\n',
+    '  -r, --rules       display the rules and exit\n\nExamples:\n',
+    '  node-rpsls        Return JSON with single player RPSLS result.\n',
+    '                    e.g. {"player":"rock"}\n',
+    '  node-rpsls rock   Return JSON with results for RPSLS played against a simulated opponent.\n',
+    '                    e.g {"player":"rock","opponent":"Spock","result":"lose"}'
         );
-})
+}
 
-theR(() => {
-    console.log('Rules for Rock Paper Scissors:\n\n',
-        '  - Scissors CUTS Paper\n',
-        '  - Paper COVERS Rock\n',
-        '  - Rock CRUSHES Scissors'
+function theR() {
+    console.log('Rules for the Lizard-Spock Expansion of Rock Paper Scissors:\n\n',
+    ' - Scissors CUTS Paper\n',
+    ' - Paper COVERS Rock\n',
+    ' - Rock CRUSHES Scissors'
         );
-})
+}
+
 
 if (args.h || args.help) {
     theHelp();

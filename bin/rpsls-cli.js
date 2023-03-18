@@ -1,9 +1,9 @@
 minimist = require(minimist);
 import {rpsls} from '../lib/rpsls.js';
 
-var args = minimist(process.argv.split(2));
+let args = minimist(process.argv.split(2));
 
-theHelp(() => {
+function theHelp() {
     console.log('Usage: node-rpsls [SHOT]\nPlay the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)!\n\n',
     '  -h, --help        display this help message and exit\n',
     '  -r, --rules       display the rules and exit\n\nExamples:\n',
@@ -12,9 +12,9 @@ theHelp(() => {
     '  node-rpsls rock   Return JSON with results for RPSLS played against a simulated opponent.\n',
     '                    e.g {"player":"rock","opponent":"Spock","result":"lose"}'
         );
-})
+}
 
-theR(() => {
+function theR() {
     console.log('Rules for the Lizard-Spock Expansion of Rock Paper Scissors:\n\n',
     ' - Scissors CUTS Paper\n',
     ' - Paper COVERS Rock\n',
@@ -27,7 +27,7 @@ theR(() => {
     ' - Spock VAPORIZES Rock\n',
     ' - Rock CRUSHES Scissors'
         );
-})
+}
 
 if (args.h || args.help) {
     theHelp();
