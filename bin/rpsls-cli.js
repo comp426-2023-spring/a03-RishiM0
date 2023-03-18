@@ -1,7 +1,7 @@
-minimist = require(minimist);
+import minimist from 'minimist';
 import {rpsls} from '../lib/rpsls.js';
 
-let args = minimist(process.argv.split(2));
+let args = minimist(process.argv.slice(2));
 
 function theHelp() {
     console.log('Usage: node-rpsls [SHOT]\nPlay the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)!\n\n',
@@ -35,6 +35,10 @@ if (args.h || args.help) {
 } else if (args.r || args.rules) {
     theR();
     process.exit(0);
+}
+
+if (args._.length == 0) {
+	let result = rpsls();
 }
 
 let hand = args._[0];

@@ -1,16 +1,16 @@
-minimist = require(minimist);
+import minimist from 'minimist';
 import {rps} from '../lib/rpsls.js';
 
-let args = minimist(process.argv.split(2));
+let args = minimist(process.argv.slice(2));
 
 function theHelp() {
     console.log('Usage: node-rpsls [SHOT]\nPlay the Lizard-Spock Expansion of Rock Paper Scissors (RPSLS)!\n\n',
     '  -h, --help        display this help message and exit\n',
     '  -r, --rules       display the rules and exit\n\nExamples:\n',
-    '  node-rpsls        Return JSON with single player RPSLS result.\n',
+    '  node-rps        Return JSON with single player RPSLS result.\n',
     '                    e.g. {"player":"rock"}\n',
-    '  node-rpsls rock   Return JSON with results for RPSLS played against a simulated opponent.\n',
-    '                    e.g {"player":"rock","opponent":"Spock","result":"lose"}'
+    '  node-rps rock   Return JSON with results for RPSLS played against a simulated opponent.\n',
+    '                    e.g {"player":"rock","opponent":"paper","result":"lose"}'
         );
 }
 
@@ -29,6 +29,10 @@ if (args.h || args.help) {
 } else if (args.r || args.rules) {
     theR();
     process.exit(0);
+}
+
+if (args._.length == 0) {
+	let result = rps();
 }
 
 let hand = args._[0];
