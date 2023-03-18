@@ -1,0 +1,22 @@
+{
+  "name": "node-rpsls",
+  "version": "1.0.0",
+  "description": "rock paper scissors",
+  "main": "./lib/rpsls.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/comp426-2023-spring/a03-RishiM0.git"
+  },
+  "author": "RishiM0",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/comp426-2023-spring/a03-RishiM0/issues"
+  },
+  "homepage": "https://github.com/comp426-2023-spring/a03-RishiM0#readme",
+  "dependencies": {
+    "minimist": "^1.2.8"
+  }
+}
