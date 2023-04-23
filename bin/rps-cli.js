@@ -33,12 +33,11 @@ if (args.h || args.help) {
 
 let hand = args._[0];
 try {
-    let result = rps(hand);
-    console.log(JSON.stringify(result))
-} catch (err) {
-    console.log(err);
-    console.log('\ninvalid entry\n');
-    theHelp();
-    theR();
-    process.exit(0);
+	result = rps(move);
+	console.log(JSON.stringify(result));
+} catch (e) {
+	console.log('Invalid entry!\n\n');
+	theHelp();
+	theR();
+	process.exit(0);
 }
