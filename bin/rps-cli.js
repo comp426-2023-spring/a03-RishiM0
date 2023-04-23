@@ -31,10 +31,6 @@ if (args.h || args.help) {
     process.exit(0);
 }
 
-if (args._.length == 0) {
-	let result = rps();
-}
-
 let hand = args._[0];
 try {
     let result = rps(hand);
