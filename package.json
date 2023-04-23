@@ -19,5 +19,9 @@
   "dependencies": {
     "minimist": "^1.2.8"
   },
+  "bin": {
+		"node-rps": "./bin/rps-cli.js",
+		"node-rpsls": "./bin/rpsls-cli.js"
+	},
   "type": "module"
 }
